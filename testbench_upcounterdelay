@@ -1,0 +1,21 @@
+module tb();
+reg clk,rst;
+wire [2:0} count;
+
+upcounter dut(clk,rst,count);
+
+initial begin
+clk=0;
+forever #5ns clk=~clk;
+end
+
+initial beign 
+rst=1;
+#6ns;
+rst=0;
+
+#100ns;
+$finish;
+
+end 
+endmodule
